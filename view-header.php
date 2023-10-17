@@ -20,7 +20,7 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="team.php">Teams</a>
+          <a class="nav-link" href="teams.php">Teams</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="players.php">Players</a>
