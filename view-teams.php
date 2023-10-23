@@ -22,7 +22,7 @@ while ($team = $teams->fetch_assoc()) {
         <button type="submit" class="btn btn-primary">Players</button>
       </form>
     </td>
-    <td><a href="coaches.php?id=<?php echo $team['team_id']; ?>">Head Coach</a></td>
+    <td><a href="coach.php?id=<?php echo $team['team_id']; ?>">Head Coach</a></td>
   </tr>
 <?php
 }
