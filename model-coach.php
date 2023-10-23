@@ -1,5 +1,5 @@
 <?php
-function selectTeamsByPlayer($cid) {
+function selectCoach($cid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT coach_id, coach_name FROM Coach c JOIN Team t ON t.team_id = c.team_id WHERE t.team_id =?");
