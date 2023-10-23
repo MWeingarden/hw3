@@ -2,9 +2,9 @@
 require_once("util-db.php");
 require_once("model-coach.php");
 
-$pageTitle = "Head Coaches";
+$pageTitle = "NFL Head Coaches";
 include "view-header.php";
-$team = selectCoach();
+$teams = selectCoach($_GET['id']);
 include "view-coach.php";
 include "view-footer.php";
 ?>
