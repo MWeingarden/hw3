@@ -22,7 +22,7 @@ while ($player = $players->fetch_assoc()) {
     <td><?php echo $player['reception_targets']; ?></td>
     <td><?php echo $player['reception_yards']; ?></td>
     <td><?php echo $player['rushing_attempts']; ?></td>
-    <td><?php echo $player['rusing_yards']; ?></td>
+    <td><?php echo $player['rushing_yards']; ?></td>
     <td><?php echo $player['rushing_yards_per_attempt']; ?></td>
   </tr>
 <?php
