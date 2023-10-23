@@ -1,4 +1,4 @@
-<h1>NFL Coaches</h1>
+<h1>NFL Head Coach</h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -18,3 +18,6 @@ while ($team = $teams->fetch_assoc()) {
 <?php
 }
 ?>
+    </tbody>
+  </table>
+</div>
