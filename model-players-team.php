@@ -1,5 +1,5 @@
 <?php
-function selectPlayers() {
+function selectPlayersTeam() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT player_id, player_name, position FROM `Player`");
