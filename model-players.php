@@ -1,3 +1,4 @@
+// 12:00 in video
 <?php
 function selectPlayers() {
     try {
