@@ -12,7 +12,7 @@ while ($team = $teams->fetch_assoc()) {
   $players = selectTeamsByPlayer($team['team_id']);
   while($player = $players->fetch_assoc()) {
 ?>
-    <li class="list-group-item"><?php echo $team['player_name']; ?> - <?php echo $team['position']; ?></li>
+    <li class="list-group-item"><?php echo $player['player_name']; ?> - <?php echo $player['position']; ?></li>
 <?php
   }
 ?>
