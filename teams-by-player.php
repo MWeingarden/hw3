@@ -4,7 +4,7 @@ require_once("model-teams-by-player.php");
 
 $pageTitle = "Teams by Player";
 include "view-header.php";
-$teams = selectTeamsByPlayer($_POST['pid']);
+$teams = selectTeamsByPlayer($_POST['tid']);
 include "view-teams-by-player.php";
 include "view-footer.php";
 ?>
