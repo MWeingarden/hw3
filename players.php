@@ -16,8 +16,8 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Delete":
-      if (deletePlayer($_POST['tNumber'], $_POST['pName'], $_POST['pPosition'], $_POST['pReceptions'], $_POST['pReceptionYards'], $_POST['pReceptionTargets'], $_POST['pRushingAttempts'], $_POST['pRushingYards'], $_POST['pRushingYardsPerAttempt'])) {
-        echo '<div class="alert alert-success" role="alert">Player Added!</div>';
+      if (deletePlayer($_POST['pid'])) {
+        echo '<div class="alert alert-success" role="alert">Player Deleted!</div>';
       }
       else {
         echo '<div class="alert alert-danger" role="alert">Error!</div>';
