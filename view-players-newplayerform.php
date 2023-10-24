@@ -52,6 +52,7 @@
             <label for="pRushingYardsPerAttempt" class="form-label">Rushing Yards Per Attempt</label>
             <input type="number" class="form-control" id="pRushingYardsPerAttempt" name="pRushingYardsPerAttempt">
           </div>
+            <input type="hidden" name="actionType" value ="Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
