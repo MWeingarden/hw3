@@ -47,7 +47,7 @@ function deletePlayer($pID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM Player WHERE player_id = ?");
-        $stmt->bind_param("i", $pID,);
+        $stmt->bind_param("i", $pID);
         $success = $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
