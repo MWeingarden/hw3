@@ -43,7 +43,7 @@ function updatePlayer($tID, $pName, $position, $receptions, $recepYards, $recepT
     }
 }
 
-function deletePlayer($pid) {
+function deletePlayer($pID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("DELETE FROM Player WHERE player_id = ?");
