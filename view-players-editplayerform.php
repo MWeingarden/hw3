@@ -17,42 +17,43 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="tNumber" class="form-label">Team Number</label>
-            <input type="number" class="form-control" id="tNumber" name="tNumber">
+            <label for="tNumber<?php echo $player['player_id']; ?>" class="form-label">Team Number</label>
+            <input type="number" class="form-control" id="tNumber<?php echo $player['player_id']; ?>" name="tNumber" value="<?php echo $player['team_id']; ?>">
           </div>
           <div class="mb-3">
-            <label for="pName" class="form-label">Player Name</label>
-            <input type="text" class="form-control" id="pName" name="pName">
+            <label for="pName<?php echo $player['player_id']; ?>" class="form-label">Player Name</label>
+            <input type="text" class="form-control" id="pName<?php echo $player['player_id']; ?>" name="pName" value="<?php echo $player['player_name']; ?>">
           </div>
           <div class="mb-3">
-            <label for="pPosition" class="form-label">Position (Abbreviated)</label>
-            <input type="text" class="form-control" id="pPosition" name="pPosition">
+            <label for="pPosition<?php echo $player['player_id']; ?>" class="form-label">Position (Abbreviated)</label>
+            <input type="text" class="form-control" id="pPosition<?php echo $player['player_id']; ?>" name="pPosition" value="<?php echo $player['position']; ?>">
           </div>
           <div class="mb-3">
-            <label for="pReceptions" class="form-label">Receptions</label>
-            <input type="number" class="form-control" id="pReceptions" name="pReceptions">
+            <label for="pReceptions<?php echo $player['player_id']; ?>" class="form-label">Receptions</label>
+            <input type="number" class="form-control" id="pReceptions<?php echo $player['player_id']; ?>" name="pReceptions" value="<?php echo $player['receptions']; ?>">
           </div>
           <div class="mb-3">
-            <label for="pReceptionYards" class="form-label">Reception Yards</label>
-            <input type="number" class="form-control" id="pReceptionYards" name="pReceptionYards">
+            <label for="pReceptionYards<?php echo $player['player_id']; ?>" class="form-label">Reception Yards</label>
+            <input type="number" class="form-control" id="pReceptionYards<?php echo $player['player_id']; ?>" name="pReceptionYards" value="<?php echo $player['reception_yards']; ?>">
           </div>
           <div class="mb-3">
-            <label for="pReceptionTargets" class="form-label">Reception Targets</label>
-            <input type="number" class="form-control" id="pReceptionTargets" name="pReceptionTargets">
+            <label for="pReceptionTargets<?php echo $player['player_id']; ?>" class="form-label">Reception Targets</label>
+            <input type="number" class="form-control" id="pReceptionTargets<?php echo $player['player_id']; ?>" name="pReceptionTargets" value="<?php echo $player['reception_targets']; ?>">
           </div>
           <div class="mb-3">
-            <label for="pRushingAttempts" class="form-label">Rushing Attempts</label>
-            <input type="number" class="form-control" id="pRushingAttempts" name="pRushingAttempts">
+            <label for="pRushingAttempts<?php echo $player['player_id']; ?>" class="form-label">Rushing Attempts</label>
+            <input type="number" class="form-control" id="pRushingAttempts<?php echo $player['player_id']; ?>" name="pRushingAttempts" value="<?php echo $player['rushing_attempts']; ?>">
           </div>
           <div class="mb-3">
-            <label for="pRushingYards" class="form-label">Rushing Yards</label>
-            <input type="number" class="form-control" id="pRushingYards" name="pRushingYards">
+            <label for="pRushingYards<?php echo $player['player_id']; ?>" class="form-label">Rushing Yards</label>
+            <input type="number" class="form-control" id="pRushingYards<?php echo $player['player_id']; ?>" name="pRushingYards" value="<?php echo $player['rushing_yards']; ?>">
           </div>
           <div class="mb-3">
-            <label for="pRushingYardsPerAttempt" class="form-label">Rushing Yards Per Attempt</label>
-            <input type="number" class="form-control" id="pRushingYardsPerAttempt" name="pRushingYardsPerAttempt">
+            <label for="pRushingYardsPerAttempt<?php echo $player['player_id']; ?>" class="form-label">Rushing Yards Per Attempt</label>
+            <input type="number" class="form-control" id="pRushingYardsPerAttempt<?php echo $player['player_id']; ?>" name="pRushingYardsPerAttempt" value="<?php echo $player['rushing_yards_per_attempt']; ?>">
           </div>
-            <input type="hidden" name="actionType" value ="Add">
+            <input type="hidden" name="pID" value="<?php echo $player[player_id']; ?>">
+            <input type="hidden" name="actionType" value ="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
       </div>
