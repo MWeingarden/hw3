@@ -7,7 +7,7 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="editPlayerModal" tabindex="-1" aria-labelledby="editPlayerModalLabel<?php echo $player['player_id']; ?>" aria-hidden="true">
+<div class="modal fade" id="editPlayerModal<?php echo $player['player_id']; ?>" tabindex="-1" aria-labelledby="editPlayerModalLabel<?php echo $player['player_id']; ?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
