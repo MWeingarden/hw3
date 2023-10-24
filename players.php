@@ -16,7 +16,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
     case "Delete":
-      if (deletePlayer($_POST['pid'])) {
+      if (deletePlayer($_POST['pID'])) {
         echo '<div class="alert alert-success" role="alert">Player Deleted!</div>';
       }
       else {
