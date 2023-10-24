@@ -52,7 +52,7 @@
             <label for="pRushingYardsPerAttempt<?php echo $player['player_id']; ?>" class="form-label">Rushing Yards Per Attempt</label>
             <input type="number" class="form-control" id="pRushingYardsPerAttempt<?php echo $player['player_id']; ?>" name="pRushingYardsPerAttempt" value="<?php echo $player['rushing_yards_per_attempt']; ?>">
           </div>
-            <input type="hidden" name="pID" value="<?php echo $player[player_id']; ?>">
+            <input type="hidden" name="pID" value="<?php echo $player['player_id']; ?>">
             <input type="hidden" name="actionType" value ="Edit">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>
