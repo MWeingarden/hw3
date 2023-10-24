@@ -32,7 +32,7 @@ while ($player = $players->fetch_assoc()) {
     <td></td>
     <td>
       <form method="post" action="">
-        <input type="hidden" name="pid" value="<?php echo $player['player_id']; ?>">
+        <input type="hidden" name="pID" value="<?php echo $player['player_id']; ?>">
         <input type="hidden" name="actionType" value="Delete">
         <button type="submit" class="btn btn-primary">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
