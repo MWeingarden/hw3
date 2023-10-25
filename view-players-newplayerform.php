@@ -17,7 +17,7 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="tNumber" class="form-label">Team Number</label>
+            <label for="tNumber" class="form-label">Team</label>
             <input type="number" class="form-control" id="tNumber" name="tNumber">
           </div>
           <div class="mb-3">
