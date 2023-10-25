@@ -31,7 +31,7 @@ function insertPlayer($tID, $pName, $position, $receptions, $recepYards, $recepT
 function updatePlayer($tID, $pName, $position, $receptions, $recepYards, $recepTargets, $rushAttempts, $rushYards, $rushYardsPerAttempt, $pID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE Player SET team_id = ?, player_name = '?', position = '?', receptions = ?, reception_yards = ?, reception_targets = ?, rushing_attempts = ?, rushing_yards = ?, rushing_yards_per_attempt = ? WHERE player_id = ?");
+        $stmt = $conn->prepare("UPDATE Player SET team_id = ?, player_name = ?, position = ?, receptions = ?, reception_yards = ?, reception_targets = ?, rushing_attempts = ?, rushing_yards = ?, rushing_yards_per_attempt = ? WHERE player_id = ?");
         $stmt->bind_param("issiiiiidi", $tID, $pName, $position, $receptions, $recepYards, $recepTargets, $rushAttempts, $rushYards, $rushYardsPerAttempt, $pID);
         $success = $stmt->execute();
         $result = $stmt->get_result();
