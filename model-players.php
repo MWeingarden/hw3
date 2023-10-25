@@ -42,11 +42,11 @@ function insertPlayer($tID, $pName, $position, $receptions, $recepYards, $recepT
     }
 }
 
-function updatePlayer($pName, $position, $receptions, $recepYards, $recepTargets, $rushAttempts, $rushYards, $rushYardsPerAttempt, $tName, $pID) {
+function updatePlayer($tID, $pName, $position, $receptions, $recepYards, $recepTargets, $rushAttempts, $rushYards, $rushYardsPerAttempt, $tName, $pID) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE Player SET player_name = ?, position = ?, receptions = ?, reception_yards = ?, reception_targets = ?, rushing_attempts = ?, rushing_yards = ?, rushing_yards_per_attempt = ?, team_name = ? WHERE player_id = ?");
-        $stmt->bind_param("ssiiiiidsi", $pName, $position, $receptions, $recepYards, $recepTargets, $rushAttempts, $rushYards, $rushYardsPerAttempt, $tName, $pID);
+        $stmt = $conn->prepare("UPDATE Player SET team_id = ?, player_name = ?, position = ?, receptions = ?, reception_yards = ?, reception_targets = ?, rushing_attempts = ?, rushing_yards = ?, rushing_yards_per_attempt = ?, team_name = ? WHERE player_id = ?");
+        $stmt->bind_param("issiiiiidsi", $tID, $pName, $position, $receptions, $recepYards, $recepTargets, $rushAttempts, $rushYards, $rushYardsPerAttempt, $tName, $pID);
         $success = $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
