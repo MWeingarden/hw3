@@ -23,10 +23,7 @@
           <div class="mb-3">
             <label for="pName<?php echo $player['player_id']; ?>" class="form-label">Player Name</label>
             <label for="tNumber" class="form-label">Team</label>
-            <?php
-            $teamList = selectTeamsForInput();
-            include "view-team-input-list.php";
-            ?>
+
           </div>
           <div class="mb-3">
             <label for="pPosition<?php echo $player['player_id']; ?>" class="form-label">Position (Abbreviated)</label>
