@@ -2,7 +2,7 @@
 function selectPlayers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT player_id, player_name, position, receptions, rushing_attempts FROM `Player`");
+        $stmt = $conn->prepare("SELECT player_id, player_name, position, receptions, reception_targets, reception_yards, rushing_attempts, rushing_yards, rushing_yards_per_attempt, team_id FROM `Player`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
