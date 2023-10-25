@@ -17,7 +17,7 @@
       <div class="modal-body">
         <form method="post" action="">
           <div class="mb-3">
-            <label for="tNumber<?php echo $player['player_id']; ?>" class="form-label">Team Number</label>
+            <label for="tNumber<?php echo $player['player_id']; ?>" class="form-label">Team</label>
             <input type="number" class="form-control" id="tNumber<?php echo $player['player_id']; ?>" name="tNumber" value="<?php echo $player['team_id']; ?>">
           </div>
           <div class="mb-3">
