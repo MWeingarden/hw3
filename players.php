@@ -8,7 +8,7 @@ include "view-header.php";
 if (isset($_POST['actionType'])) {
   switch ($_POST['actionType']) {
     case "Add":
-      if (insertPlayer($_POST['tNumber'], $_POST['pName'], $_POST['pPosition'], $_POST['pReceptions'], $_POST['pReceptionYards'], $_POST['pReceptionTargets'], $_POST['pRushingAttempts'], $_POST['pRushingYards'], $_POST['pRushingYardsPerAttempt'], $_POST['tName'])) {
+      if (insertPlayer($_POST['tNumber'], $_POST['pName'], $_POST['pPosition'], $_POST['pReceptions'], $_POST['pReceptionYards'], $_POST['pReceptionTargets'], $_POST['pRushingAttempts'], $_POST['pRushingYards'], $_POST['pRushingYardsPerAttempt'])) {
         echo '<div class="alert alert-success" role="alert">Player Added!</div>';
       }
       else {
@@ -16,7 +16,7 @@ if (isset($_POST['actionType'])) {
       }
       break;
      case "Edit":
-      if (updatePlayer($_POST['tNumber'], $_POST['pName'], $_POST['pPosition'], $_POST['pReceptions'], $_POST['pReceptionYards'], $_POST['pReceptionTargets'], $_POST['pRushingAttempts'], $_POST['pRushingYards'], $_POST['pRushingYardsPerAttempt'], $_POST['pID'], $_POST['tName'])) {
+      if (updatePlayer($_POST['tNumber'], $_POST['pName'], $_POST['pPosition'], $_POST['pReceptions'], $_POST['pReceptionYards'], $_POST['pReceptionTargets'], $_POST['pRushingAttempts'], $_POST['pRushingYards'], $_POST['pRushingYardsPerAttempt'], $_POST['pID'])) {
         echo '<div class="alert alert-success" role="alert">Player Edited!</div>';
       }
       else {
