@@ -1,4 +1,4 @@
-<select class="form-select" id="tNumber" name="tNumber">
+<select class="form-select" id="tNumber" name="tName">
 <?php
 while ($teamItem = $teamList->fetch_assoc()) {
 ?>
