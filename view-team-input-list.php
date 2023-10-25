@@ -2,7 +2,7 @@
 <?php
 while ($teamItem = $teamList->fetch_assoc()) {
     $selText = "";
-    if($selectedTeam == $teamItem['player_id']) {
+    if($selectedTeam == $teamItem['team_id']) {
       $selText = " selected";
     }
 ?>
