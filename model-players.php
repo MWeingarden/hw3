@@ -13,10 +13,11 @@ function selectPlayers() {
     }
 }
 
-function selectTeamsForInput() {
+function selectTeamsForInput($tID, $tName) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT team_id, team_name FROM Team ORDER BY team_name");
+        $stmt->bind_param("is", $tID, $tName);
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
