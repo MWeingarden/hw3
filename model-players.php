@@ -46,7 +46,7 @@ function updatePlayer($pName, $position, $receptions, $recepYards, $recepTargets
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE Player SET player_name = ?, position = ?, receptions = ?, reception_yards = ?, reception_targets = ?, rushing_attempts = ?, rushing_yards = ?, rushing_yards_per_attempt = ?, team_name = ? WHERE player_id = ?");
-        $stmt->bind_param("ssiiiiidis", $pName, $position, $receptions, $recepYards, $recepTargets, $rushAttempts, $rushYards, $rushYardsPerAttempt, $tName, $pID);
+        $stmt->bind_param("ssiiiiidsi", $pName, $position, $receptions, $recepYards, $recepTargets, $rushAttempts, $rushYards, $rushYardsPerAttempt, $tName, $pID);
         $success = $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
