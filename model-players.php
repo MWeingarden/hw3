@@ -2,7 +2,21 @@
 function selectPlayers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT player_id, player_name, position, receptions, reception_targets, reception_yards, rushing_attempts, rushing_yards, rushing_yards_per_attempt, team_id FROM `Player`");
+        $stmt = $conn->prepare("SELECT player_id, player_name, position, receptions, reception_targets, reception_yards, rushing_attempts, rushing_yards, rushing_yards_per_attempt, team_id FROM `Player` ORDER BY player_name");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $conn->close();
+        return $result;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+function selectTeamsForInput() {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("SELECT team_id, team_name FROM Team ORDER BY team_name");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
