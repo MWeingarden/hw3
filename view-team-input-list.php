@@ -1,6 +1,5 @@
 <select class="form-select" id="tNumber" name="tNumber">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
+<?php
+while ($
   <option value="3">Three</option>
 </select>
