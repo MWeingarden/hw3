@@ -1,5 +1,5 @@
 <h1>Teams With Players</h1>
-<div class="card-group">
+<div class="row row-cols-1 row-cols-md-3 g-4">
 <?php
 while ($team = $teams->fetch_assoc()) {
 ?>
