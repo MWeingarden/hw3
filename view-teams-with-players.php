@@ -18,7 +18,7 @@ while ($team = $teams->fetch_assoc()) {
 ?>
       </ul>
       </p>
-      <p class="card-text"><small class="text-body-secondary">Sponsored by the NFL</small></p>
+      <p class="card-text"><small class="text-body-secondary">Add more players under the player tab!</small></p>
     </div>
   </div>
 <?php
