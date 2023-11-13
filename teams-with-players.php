@@ -1,6 +1,6 @@
 <?php
 require_once("util-db.php");
-require_once("model/teams-with-players.php");
+require_once("model-teams-with-players.php");
 
 $pageTitle = "Teams With Players";
 include "view-header.php";
