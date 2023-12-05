@@ -15,7 +15,7 @@ include "view-header.php";
   }
 
   h1 {
-    padding-top: 50px; /* Adjust the value to move the image down */
+    padding-top: 150px; /* Adjust the value to move the image down */
     text-align: center;
     color: black;
   }
