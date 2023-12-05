@@ -17,7 +17,6 @@ include "view-header.php";
     padding-top: 50px; /* Adjust the value to move the image down */
   }
 </style>
-<head></head>
 <h1>NFL Player Stats</h1>
 
 <?php
