@@ -1,9 +1,27 @@
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Popper.js (required for Bootstrap) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 <script>
   $(document).ready(function() {
     // Toggle player list visibility on card click
     $('.card').click(function() {
       $(this).find('.list-group').toggle();
+    });
+
+    // Enable Bootstrap Popovers for player names
+    $('.player-name').popover({
+      trigger: 'hover', // Show on hover
+      placement: 'top', // Show on top of the player name
+      content: 'Additional information goes here', // You can customize this content dynamically based on player data
     });
   });
 </script>
@@ -22,7 +40,12 @@
             $players = selectTeamsByPlayer($team['team_id']);
             while ($player = $players->fetch_assoc()) {
             ?>
-              <li class="list-group-item"><?php echo $player['player_name']; ?> - <?php echo $player['position']; ?></li>
+              <li class="list-group-item">
+                <!-- Add the 'player-name' class to enable the Popover -->
+                <span class="player-name" data-toggle="popover" data-content="Additional information about <?php echo $player['player_name']; ?>">
+                  <?php echo $player['player_name']; ?>
+                </span> - <?php echo $player['position']; ?>
+              </li>
             <?php
             }
             ?>
@@ -34,8 +57,4 @@
   <?php
   }
   ?>
-</div>
-  </div>
-<?php
-?>
 </div>
