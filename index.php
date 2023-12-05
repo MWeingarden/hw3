@@ -5,10 +5,9 @@ include "view-header.php";
 
 
 <style>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/Zephyr/bootstrap.min.css">
   body {
     background-image: url('https://oladino.com/wp-content/uploads/2022/02/2021-NFL-Team-Logo-Bundle-Svg-TB200122003.png');
-    background-size: 700px;
+    background-size: 650px;
     background-position: center center;
     /* Add more background properties if needed */
   }
@@ -18,7 +17,7 @@ include "view-header.php";
   }
 </style>
 <h1>NFL Player Stats</h1>
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/Zephyr/bootstrap.min.css">
 <?php
 include "view-footer.php";
 ?>
