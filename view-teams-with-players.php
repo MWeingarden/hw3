@@ -21,9 +21,7 @@
     $('.player-name').popover({
       trigger: 'hover', // Show on hover
       placement: 'top', // Show on top of the player name
-      <?php
-      content: 'Additional information goes here', // You can customize this content dynamically based on player data
-      ?>
+      content: 'Recommended for fantasy football!', // You can customize this content dynamically based on player data
     });
   });
 </script>
