@@ -16,11 +16,8 @@ include "view-header.php";
 
   h1 {
     padding-top: 450px; /* Adjust the value to move the image down */
-    text-align: center;
-    color: black;
   }
 </style>
-<h1>NFL Player Stats</h1>
 <?php
 include "view-footer.php";
 ?>
