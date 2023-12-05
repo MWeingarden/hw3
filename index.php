@@ -20,6 +20,7 @@ include "view-header.php";
     color: black;
   }
 </style>
+<h1></h1>
 <?php
 include "view-footer.php";
 ?>
